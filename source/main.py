@@ -12,12 +12,12 @@ def main():
     if data is None:
         return
     print("\n -----Repository Information-----")
-    print("Repository:", data["name"])
-    print("Description:", data["description"])
-    print("Stars:", data["stargazers_count"])
-    print("Forks:", data["forks_count"])
-    print("Open Issues:", data["open_issues_count"])
-    print("Language:", data["language"])
+    print("Repository:", data.get("name","Not available"))
+    print("Description:", data.get("description") or "NOt available")
+    print("Stars:", data.get("stargazers_count", "Not available"))
+    print("Forks:", data.get("forks_count","Not available"))
+    print("Open Issues:", data.get("open_issues_count" , "NOt available"))
+    print("Language:", data.get("language") or "NOt available")
 
 
 if __name__ == "__main__":
